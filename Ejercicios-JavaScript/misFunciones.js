@@ -4,6 +4,7 @@
  * @method convertirUnidades de la función
  * @param {string} id
  * @param {string} valor
+ *  //TODO: deberia admitir numeros con coma
  */
 
 function convertirUnidades(id, valor){
@@ -34,4 +35,25 @@ function convertirUnidades(id, valor){
 
     }
 
+}
+
+/**
+ * Permite convertir grados a radianes y viceversa
+ * method convertirGR
+ * @param id
+ */
+function convertirGR(id){
+    let grad, rad;
+    //Agregar mensaje de error cuando se ingresa letras
+    //TODO: deberia admitir numeros con coma
+
+    if(id==="grados") {
+        grad = document.getElementById("grados").value;
+        rad = grad * Math.PI / 180;
+        document.getElementById("radianes").value = rad;
+    }else if(id==="radianes"){
+        rad = document.getElementById("radianes").value;
+        grad = rad*180/Math.PI;
+        document.getElementById("grados").value = grad;
+    }
 }
