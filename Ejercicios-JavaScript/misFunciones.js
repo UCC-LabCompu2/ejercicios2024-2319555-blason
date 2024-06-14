@@ -40,18 +40,21 @@ function convertirUnidades(id, valor){
 /**
  * Permite convertir grados a radianes y viceversa
  * method convertirGR
- * @param id
+ * @param {string} id -El id de los inputs de grados o radianes.
+ * @param {number} valor- El valor de los inputs de grados o radianes.
  */
-function convertirGR(id){
+function convertirGR(id, valor){
     let grad, rad;
-    //Agregar mensaje de error cuando se ingresa letras
-    //TODO: deberia admitir numeros con coma
-
-    if(id==="grados") {
+    if(isNaN(valor)){
+        document.getElementById("grados").value = " ";
+        document.getElementById("radianes").value = " ";
+        alert("El valor ingresado no es correcto");
+    }else if(id==="grados") {
         grad = document.getElementById("grados").value;
         rad = grad * Math.PI / 180;
         document.getElementById("radianes").value = rad;
-    }else if(id==="radianes"){
+    }
+    else if(id==="radianes"){
         rad = document.getElementById("radianes").value;
         grad = rad*180/Math.PI;
         document.getElementById("grados").value = grad;
