@@ -68,3 +68,15 @@ function convertirGR(id, valor){
 *Permite sumar, restar, dividir y multiplicar
 *
  */
+/**
+ * Permite mostrar u ocultar cierta información que contiene el div
+ * method mostrar_ocultar
+ * @param {string} valorMO
+ */
+function mostrar_ocultar(valorMO){
+    if(valorMO=="val_mostrar"){
+        document.getElementById("divMO").style.display='block';
+    }else if(valorMO=="val_ocultar"){
+        document.getElementById("divMO").style.display='none';
+    }
+}
