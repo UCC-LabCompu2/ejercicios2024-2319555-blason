@@ -1,6 +1,8 @@
 /**
  * Descripción
  * Conversión de unidades, de metros, yardas, pies y pulgadas.
+ * Refactorizacion de codigo.
+ * Si el usuario ingresa una coma, se cambia por un punto.
  * @method convertirUnidades de la función
  * @param {string} id -El id de los inputs de metros, yardas, pies o pulgadas.
  * @param {number} valor- El valor de los inputs de metros, pies, yardas o pulgadas.
@@ -10,6 +12,10 @@
 
 function convertirUnidades(id, valor){
 var metro, pulgada, pie, yarda;
+
+if(valor.includes(",")){
+    valor = valor.replace(",", ".");
+}
 
     if(isNaN(valor)){
         alert("El valor ingresado no es correcto" +id);
@@ -40,10 +46,10 @@ var metro, pulgada, pie, yarda;
         pulgada = valor*36;
 
     }
-    document.lasUnidades.unid_metro.value = metro;
-    document.lasUnidades.unid_pulgada.value = pulgada;
-    document.lasUnidades.unid_pie.value = pie;
-    document.lasUnidades.unid_yarda.value = yarda;
+    document.lasUnidades.unid_metro.value = Math.round(metro*100)/100;
+    document.lasUnidades.unid_pulgada.value = Math.round(pulgada*100)/100;
+    document.lasUnidades.unid_pie.value = Math.round(pie*100)/100;
+    document.lasUnidades.unid_yarda.value = Math.round(yarda*100)/100;
 }
 
 /**
