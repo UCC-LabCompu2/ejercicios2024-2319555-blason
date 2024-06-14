@@ -1,9 +1,10 @@
 /**
  * Descripción
- * permite convertir metro, pie, pulgada y yarda
+ * Conversión de unidades, de metros, yardas, pies y pulgadas.
  * @method convertirUnidades de la función
- * @param {string} id
- * @param {string} valor
+ * @param {string} id -El id de los inputs de metros, yardas, pies o pulgadas.
+ * @param {number} valor- El valor de los inputs de metros, pies, yardas o pulgadas.
+ * @return
  *  //TODO: deberia admitir numeros con coma
  */
 
@@ -34,7 +35,6 @@ function convertirUnidades(id, valor){
         document.getElementById("pulgada").value = valor*36;
 
     }
-
 }
 
 /**
