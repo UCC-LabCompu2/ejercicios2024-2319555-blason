@@ -133,3 +133,26 @@ function calcularDiv(){
     num2=document.getElementsByName("div_num2")[0].value;
     document.getElementsByName("div_total")[0].innerHTML= num1 / Number(num2);
 }
+/**
+ *Permite cargar .
+ * @method cargarWeb
+ */
+function cargarWeb(){
+var cant, unidad, urlcomp;
+
+    cant = document.getElementById("distancia").value;
+    unidad = document.getElementsByName("unidades")[0].value;
+
+    urlcomp = "segundaWeb.html#" + cant + "#" + unidad;
+    window.open(urlcomp);
+    }
+
+function cargarResultado(){
+    var urlComp, can, un;
+
+    urlcomp = window.location.href.split("#")[5];
+    can = urlComp.split("#")[1];
+    un = urlComp.split("#")[2];
+
+    document.getElementById("dist").value = can + " " + un;
+}
