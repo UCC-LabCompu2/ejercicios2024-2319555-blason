@@ -9,37 +9,46 @@
  */
 
 function convertirUnidades(id, valor){
+var metro, pulgada, pie, yarda;
 
     if(isNaN(valor)){
-        document.getElementById("metro").value = " ";
-        document.getElementById("pulgada").value = " ";
-        document.getElementById("pie").value = " ";
-        document.getElementById("yarda").value = " ";
-        alert("El valor ingresado no es correcto");
+        alert("El valor ingresado no es correcto" +id);
+        metro = "";
+        pulgada = "";
+        pie = "";
+        yarda = "";
     }else if(id==="metro"){
-        document.getElementById("pulgada").value = valor*39.3701;
-        document.getElementById("pie").value = valor*3.28084;
-        document.getElementById("yarda").value = valor*1.09361;
+        metro = valor;
+        pulgada = valor*39.3701;
+        pie = valor*3.28084;
+        yarda = valor*1.09361;
     }else if(id==="pulgada"){
-        document.getElementById("metro").value = valor*0.0254;
-        document.getElementById("pie").value = valor*0.0833333;
-        document.getElementById("yarda").value = valor*0.0277778;
+        pulgada = valor;
+        metro = valor*0.0254;
+        pie = valor*0.0833333;
+        yarda = valor*0.0277778;
     }else if(id==="pie"){
-        document.getElementById("metro").value = valor*0.3048;
-        document.getElementById("pulgada").value = valor*12;
-        document.getElementById("yarda").value = valor*0.333333;
+        pie =  valor;
+        metro = valor*0.3048;
+        pulgada = valor*12;
+        yarda = valor*0.333333;
 
     }else if(id==="yarda"){
-        document.getElementById("metro").value = valor*0.9143990856;
-        document.getElementById("pie").value = valor*2.999997;
-        document.getElementById("pulgada").value = valor*36;
+        yarda = valor;
+        metro = valor*0.9143990856;
+        pie = valor*2.999997;
+        pulgada = valor*36;
 
     }
+    document.lasUnidades.unid_metro.value = metro;
+    document.lasUnidades.unid_pulgada.value = pulgada;
+    document.lasUnidades.unid_pie.value = pie;
+    document.lasUnidades.unid_yarda.value = yarda;
 }
 
 /**
  * Permite convertir grados a radianes y viceversa
- * method convertirGR
+ * @method convertirGR
  * @param {string} id -El id de los inputs de grados o radianes.
  * @param {number} valor- El valor de los inputs de grados o radianes.
  */
@@ -63,7 +72,7 @@ function convertirGR(id, valor){
 
 /**
  * Permite mostrar u ocultar cierta información que contiene el div
- * method mostrar_ocultar
+ * @method mostrar_ocultar
  * @param {string} valorMO
  */
 function mostrar_ocultar(valorMO){
@@ -76,6 +85,7 @@ function mostrar_ocultar(valorMO){
 
 /**
 *Permite sumar dos numeros.
+ * @method calcularSuma
  */
 function calcularSuma(){
     let num1, num2;
@@ -86,6 +96,7 @@ function calcularSuma(){
 }
 /**
  *Permite restar dos numeros.
+ * @method calcularResta
  */
 function calcularResta(){
     let num1, num2;
@@ -96,6 +107,7 @@ function calcularResta(){
 }
 /**
  *Permite multiplicar dos numeros.
+ * @method calcularMulti
  */
 function calcularMulti(){
     let num1, num2;
@@ -106,6 +118,7 @@ function calcularMulti(){
 }
 /**
  *Permite dividir dos numeros.
+ * @method calcularDiv
  */
 function calcularDiv(){
     let num1, num2;
