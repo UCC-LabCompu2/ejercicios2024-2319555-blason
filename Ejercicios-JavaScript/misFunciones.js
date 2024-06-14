@@ -134,8 +134,9 @@ function calcularDiv(){
     document.getElementsByName("div_total")[0].innerHTML= num1 / Number(num2);
 }
 /**
- *Permite cargar .
+ *Permite pasar valores de primeraweb a segundaweb. .
  * @method cargarWeb
+ * @method cargarResultado
  */
 function cargarWeb(){
 var cant, unidad, urlcomp;
