@@ -57,3 +57,11 @@ function convertirGR(id){
         document.getElementById("grados").value = grad;
     }
 }
+
+
+
+
+/*
+*Permite sumar, restar, dividir y multiplicar
+*
+ */
