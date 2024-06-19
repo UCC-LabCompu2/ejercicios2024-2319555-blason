@@ -134,7 +134,7 @@ function calcularDiv(){
     document.getElementsByName("div_total")[0].innerHTML= num1 / Number(num2);
 }
 /**
- *Permite pasar valores de primeraweb a segundaweb.
+ *Permite pasar valores de primeraweb a segundaweb. .
  * @method cargarWeb
  * @method cargarResultado
  */
@@ -190,3 +190,5 @@ function dibujarCirCuad(){
    ctx.stroke();
 }
 
+=======
+>>>>>>> 7de55836d0372cb4d394b35c692ae0323c48bd83
