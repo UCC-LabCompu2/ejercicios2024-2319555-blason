@@ -189,6 +189,28 @@ function dibujarCirCuad(){
    ctx.arc(xMax/2,yMax/2,20,0,2*Math.PI);
    ctx.stroke();
 }
+var bandera;
+function dibujar(event) {
+    var canvas= document.getElementsById("canvasAdibujar");
+    var ctx = canvas.getContext("2d");
 
-=======
->>>>>>> 7de55836d0372cb4d394b35c692ae0323c48bd83
+    var posX = event.clientX;
+    var posY = event.clientY;
+    console.log(posX, posY);
+
+    canvas.onmousedown = function (){bandera=true};
+    canvas.onmouseup = function (){bandera=false};
+
+    if(bandera==true){
+        ctx.fillRect(posX, posY, 5, 5);
+        ctx.fill;
+    }
+
+}
+
+function limpiarCanvas(){
+    var canvas= document.getElementsById("canvasAdibujar");
+    var ctx = canvas.getContext("2d");
+
+    canvas.width = canvas.width;
+}
